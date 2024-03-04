@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Age Calculator</title>
+    <script>
+        function calculateDates() {
+            var currentDate = new Date();
+            var previousDates = [];
+            var futureDates = [];
+
+            // Calculate previous dates
+            for (var i = 1; i <= 7; i++) {
+                var previousDate = new Date(currentDate);
+                previousDate.setDate(currentDate.getDate() - i);
+                previousDates.push(previousDate);
+            }
+
+            // Calculate future dates
+            for (var i = 1; i <= 7; i++) {
+                var futureDate = new Date(currentDate);
+                futureDate.setDate(currentDate.getDate() + i);
+                futureDates.push(futureDate);
+            }
+
+            // Display the dates
+            var output = "";
+            for (var i = 0; i < previousDates.length; i++) {
+                output += "Previous Date: " + previousDates[i].getDate() + " " + getMonthName(previousDates[i].getMonth()) + " " + previousDates[i].getFullYear() + "<br>";
+            }
+            output += "<br>";
+            for (var i = 0; i < futureDates.length; i++) {
+                output += "Future Date: " + futureDates[i].getDate() + " " + getMonthName(futureDates[i].getMonth()) + " " + futureDates[i].getFullYear() + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+
+        function calculateAge() {
+            var dob = new Date(document.getElementById("dob").value);
+            var currentDate = new Date();
+
+            var years = currentDate.getFullYear() - dob.getFullYear();
+            var months = currentDate.getMonth() - dob.getMonth();
+            var days = currentDate.getDate() - dob.getDate();
+
+            if (months < 0 || (months === 0 && days < 0)) {
+                years--;
+                months += 12;
+            }
+
+            if (days < 0) {
+                var previousMonthDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 0);
+                days += previousMonthDate.getDate();
+                months--;
+            }
+
+            document.getElementById("age").innerHTML = "Age: " + years + " Years, " + months + " Months, " + days + " Days";
+        }
+
+        function getMonthName(month) {
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            return monthNames[month];
+        }
+    </script>
+</head>
+<body>
+    <h1>Date and Age Calculator</h1>
+    <button onclick="calculateDates()">Calculate Dates</button>
+    <div id="result"></div>
+
+    <h1>Age Calculator</h1>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div id="age"></div>
+</body>
+</html>
