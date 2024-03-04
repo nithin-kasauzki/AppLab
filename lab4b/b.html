@@ -5,32 +5,26 @@
     <script>
         function calculateDates() {
             var currentDate = new Date();
-            var previousDates = [];
-            var futureDates = [];
-
-            // Calculate previous dates
-            for (var i = 1; i <= 7; i++) {
+            
+            
                 var previousDate = new Date(currentDate);
-                previousDate.setDate(currentDate.getDate() - i);
-                previousDates.push(previousDate);
-            }
+                previousDate.setDate(currentDate.getDate() - 7);
+                
 
-            // Calculate future dates
-            for (var i = 1; i <= 7; i++) {
+            
                 var futureDate = new Date(currentDate);
-                futureDate.setDate(currentDate.getDate() + i);
-                futureDates.push(futureDate);
-            }
+                futureDate.setDate(currentDate.getDate() + 7);
+                
 
             // Display the dates
             var output = "";
-            for (var i = 0; i < previousDates.length; i++) {
-                output += "Previous Date: " + previousDates[i].getDate() + " " + getMonthName(previousDates[i].getMonth()) + " " + previousDates[i].getFullYear() + "<br>";
-            }
+            
+            output += "Previous Date: " + previousDate.getDate() + " " + getMonthName(previousDate.getMonth()) + " " + previousDate.getFullYear() + "<br>";
+            
             output += "<br>";
-            for (var i = 0; i < futureDates.length; i++) {
-                output += "Future Date: " + futureDates[i].getDate() + " " + getMonthName(futureDates[i].getMonth()) + " " + futureDates[i].getFullYear() + "<br>";
-            }
+            
+            output += "Future Date: " + futureDate.getDate() + " " + getMonthName(futureDate.getMonth()) + " " + futureDate.getFullYear() + "<br>";
+            
 
             document.getElementById("result").innerHTML = output;
         }
