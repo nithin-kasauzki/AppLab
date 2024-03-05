@@ -6,10 +6,12 @@
         function binarySearch() {
             // Get the input values from the form
             var elements = document.getElementById("elements").value.split(",");
-            var key = document.getElementById("key").value;
+            var key = parseInt(document.getElementById("key").value);
 
             // Convert the elements array to numbers
-            elements = elements.map(Number);
+            elements = elements.map(function(item) {
+                return parseInt(item);
+            });
 
             // Perform binary search
             var low = 0;
