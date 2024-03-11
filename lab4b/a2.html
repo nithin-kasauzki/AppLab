@@ -29,8 +29,12 @@
         function searchLastOccurrence() {
             var str = document.getElementById("inputString").value;
             var substring = document.getElementById("searchSubstring").value;
-            var lastIndex = str.lastIndexOf(substring);
-
+            var lastIndex = -1;
+            for (var i = 0; i < str.length; i++) {
+                if (str.substring(i, i + substring.length) === substring) {
+                    lastIndex = i;
+                }
+            }
             
             displayOutput("Last occurrence index: " + lastIndex);
         }
@@ -39,11 +43,11 @@
             var str = document.getElementById("inputString").value;
             var start = parseInt(document.getElementById("startPosition").value);
             var end = parseInt(document.getElementById("endPosition").value);
-
+            var substring = "";
             
-            var substring = str.slice(start, end);
-
-            
+            for (var i = start; i < end && i < str.length; i++) {
+                substring += str[i];
+            }
             displayOutput("Extracted substring: " + substring);
         }
 
@@ -66,6 +70,8 @@
             document.getElementById("splitDelimiter").value = "";
             clearOutput();
         }
+
+        
 
         function displayOutput(output) {
             document.getElementById("output").innerHTML = output;

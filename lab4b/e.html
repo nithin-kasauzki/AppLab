@@ -13,8 +13,11 @@
     </style>
 </head>
 <body>
+    <h1>Word count</h1>
     <textarea id="textArea" rows="10" cols="50"></textarea>
     <button onclick="countWords()">Count Words</button>
+    <button onclick="resetTable()">Reset Table</button>
+    <p></p>
     <table id="wordCountTable">
         <tr>
             <th>Word Length</th>
@@ -48,6 +51,13 @@
                 var countCell = row.insertCell();
                 lengthCell.innerHTML = length;
                 countCell.innerHTML = count;
+            }
+        }
+
+        function resetTable() {
+            var table = document.getElementById("wordCountTable");
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
             }
         }
     </script>
