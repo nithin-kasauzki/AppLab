@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Loading on Mouse Events</title>
+</head>
+<body>
+
+<script>
+  function loadImageOnMouseOver() {
+    const imageElement = document.getElementById('dynamicImage');
+    imageElement.src = '0001.jpg'; // Replace with the path to your first image
+  }
+
+  function loadImageOnMouseOut() {
+    const imageElement = document.getElementById('dynamicImage');
+    imageElement.src = '0002.jpg'; // Replace with the path to your second image
+  }
+
+  document.body.addEventListener('mouseover', loadImageOnMouseOver);
+  document.body.addEventListener('mouseout', loadImageOnMouseOut);
+</script>
+
+<img id="dynamicImage" src="0000.jpg" alt="Dynamic Image">
+
+</body>
+</html>
