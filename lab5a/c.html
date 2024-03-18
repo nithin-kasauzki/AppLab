@@ -9,20 +9,20 @@
 
 <script>
   function loadImageOnMouseOver() {
-    const imageElement = document.getElementById('dynamicImage');
-    imageElement.src = '0001.jpg'; // Replace with the path to your first image
+    document.getElementById('dynamicImage').src= 'img.jpg';
+    //imageElement.src = 'img.jpg'; 
   }
 
   function loadImageOnMouseOut() {
-    const imageElement = document.getElementById('dynamicImage');
-    imageElement.src = '0002.jpg'; // Replace with the path to your second image
+    document.getElementById('dynamicImage').src = 'images.jpeg';
+    //imageElement.src = 'images.jpeg'; 
   }
 
   document.body.addEventListener('mouseover', loadImageOnMouseOver);
   document.body.addEventListener('mouseout', loadImageOnMouseOut);
 </script>
 
-<img id="dynamicImage" src="0000.jpg" alt="Dynamic Image">
+<img id="dynamicImage" src="img.jpg" alt="Dynamic Image">
 
 </body>
 </html>
