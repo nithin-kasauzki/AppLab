@@ -3,7 +3,23 @@
 <head>
     <title>Image Display</title>
     <style>
-     
+        #upperFrame {
+            height: 50%;
+            border: 1px solid black;
+            overflow: hidden; /* Added overflow to prevent scrollbars */
+        }
+        
+        #lowerFrame {
+            height: 50%;
+            border: 1px solid black;
+        }
+        
+        img {
+            width: 180px;
+            height: 160px;
+            object-fit: contain;
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
     </style>
     <script>
         function displayImage(imageUrl) {
@@ -18,30 +34,12 @@
     </script>
 </head>
 <body>
-    <frameset rows="50%, 50%">
-        <frame id="upperFrame" name="upperFrame" />
-        <frame id="lowerFrame" name="lowerFrame" />
-    </frameset>
-    
-    <script>
-        var images = [
-            "image1.jpg",
-            "image2.jpg",
-            "image3.jpg"
-        ];
-        
-        var upperFrame = window.frames["upperFrame"];
-        var upperFrameDocument = upperFrame.document;
-        
-        for (var i = 0; i < images.length; i++) {
-            var image = upperFrameDocument.createElement("img");
-            image.src = images[i];
-            image.onclick = function() {
-                displayImage(this.src);
-            };
-            
-            upperFrameDocument.body.appendChild(image);
-        }
-    </script>
+    <div id="upperFrame">
+        <img src="img1.png" onclick="displayImage('img1.png')" />
+        <img src="img2.png" onclick="displayImage('img2.png')" />
+        <img src="img3.png" onclick="displayImage('img3.png')" />
+    </div>
+    <div id="lowerFrame" onclick="clearImage()">
+    </div>
 </body>
 </html>

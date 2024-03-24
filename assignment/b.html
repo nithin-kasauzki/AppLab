@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Limit Checker</title>
+<script>
+function checkCreditLimit() {
+    var accountNumber = parseInt(prompt("Enter Account Number:"));
+    var beginningBalance = parseInt(prompt("Enter Balance at the Beginning of the Month:"));
+    var totalCharges = parseInt(prompt("Enter Total of all Items Charged this Month:"));
+    var totalCredits = parseInt(prompt("Enter Total Credits Applied this Month:"));
+    var creditLimit = parseInt(prompt("Enter Allowed Credit Limit:"));
+
+    var newBalance = beginningBalance + totalCharges - totalCredits;
+
+    document.getElementById("output").innerHTML = "New Balance: $" + newBalance;
+
+    if (newBalance > creditLimit) {
+        document.getElementById("result").innerHTML = "Credit limit exceeded.";
+    } else {
+        document.getElementById("result").innerHTML = "Credit limit not exceeded.";
+    }
+}
+</script>
+</head>
+<body>
+<h2>Department Store Credit Limit Checker</h2>
+<button onclick="checkCreditLimit()">Check Credit Limit</button>
+<div id="output"></div>
+<div id="result"></div>
+</body>
+</html>
