@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Garage Charges</title>
+    <script>
+        function calculateCharges(hours) {
+            const minimumFee = 2.00;
+            const hourlyRate = 0.50;
+            const maximumCharge = 10.00;
+
+            if (hours <= 3) {
+                return minimumFee;
+            } else if (hours <= 24) {
+                const additionalHours = hours - 3;
+                const additionalCharge = additionalHours * hourlyRate;
+                return Math.min(minimumFee + additionalCharge, maximumCharge);
+            } else {
+                return maximumCharge;
+            }
+        }
+
+        function calculateAndDisplayCharges() {
+            const hoursInput = document.getElementById('hours');
+            const chargesOutput = document.getElementById('charges');
+            const totalReceiptsOutput = document.getElementById('total-receipts');
+
+            const hours = parseFloat(hoursInput.value);
+            const charge = calculateCharges(hours);
+
+            chargesOutput.textContent = '$' + charge.toFixed(2);
+
+            const totalReceipts = parseFloat(totalReceiptsOutput.textContent) || 0;
+            totalReceiptsOutput.textContent = '$' + (totalReceipts + charge).toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Parking Garage Charges</h1>
+    <label for="hours">Hours Parked:</label>
+    <input type="number" id="hours" min="0" step="0.5">
+    <button onclick="calculateAndDisplayCharges()">Calculate Charges</button>
+    <br>
+    <p>Charge for the current customer: <span id="charges"></span></p>
+    <p>Running total of yesterday's receipts: <span id="total-receipts">$0.00</span></p>
+</body>
+</html>
