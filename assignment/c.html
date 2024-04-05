@@ -20,7 +20,7 @@ function encryptAndDecrypt() {
     var output = "Encrypted Integer: " + encrypted + "<br>";
     output += "Decrypted Integer: " + decrypted;
 
-    document.getElementById("output").innerHTML = output;
+    output.innerText = output;
 }
 
 function encrypt(input) {
@@ -66,6 +66,6 @@ function decrypt(input) {
 <body>
 <h2>Data Encryption and Decryption</h2>
 <button onclick="encryptAndDecrypt()">Encrypt and Decrypt</button>
-<div id="output"></div>
+<p id="output"></p>
 </body>
 </html>

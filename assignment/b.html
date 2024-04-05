@@ -13,12 +13,14 @@ function checkCreditLimit() {
 
     var newBalance = beginningBalance + totalCharges - totalCredits;
 
-    document.getElementById("output").innerHTML = "New Balance: $" + newBalance;
-
+    output.innerText = "New Balance: $" + newBalance;
+    
     if (newBalance > creditLimit) {
-        document.getElementById("result").innerHTML = "Credit limit exceeded.";
+        
+        result.innerText = "Credit limit exceeded.";
     } else {
-        document.getElementById("result").innerHTML = "Credit limit not exceeded.";
+        
+        result.innerText = "Credit limit not exceeded.";
     }
 }
 </script>
@@ -26,7 +28,7 @@ function checkCreditLimit() {
 <body>
 <h2>Department Store Credit Limit Checker</h2>
 <button onclick="checkCreditLimit()">Check Credit Limit</button>
-<div id="output"></div>
-<div id="result"></div>
+<p id="output"></p>
+<p id="result"></p>
 </body>
 </html>

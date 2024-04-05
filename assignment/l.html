@@ -19,12 +19,9 @@
                 alert("Click event detected.\nEvent Name: " + event.type);
             }
         }
-
-        // Attach click event listener to the document body
-        document.body.addEventListener('click', handleClick);
     </script>
 </head>
-<body>
+<body onclick="handleClick(event)"></body>
     <h1>Click Event Handler</h1>
     <p>Click anywhere on the page.</p>
 </body>
