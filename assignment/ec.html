@@ -36,7 +36,7 @@
         function findPrimes() {
             let primesSquareRoot = [];
             let primesHalf = [];
-            let textareaResult = document.getElementById("result");
+            let tArea = document.getElementById("result");
 
             let startSquareRoot = performance.now();
             for (let i = 1; i <= 1000; i++) {
@@ -54,10 +54,10 @@
             }
             let endHalf = performance.now();
 
-            textareaResult.value = "Using Square Root: " + (endSquareRoot - startSquareRoot) + " milliseconds\n";
-            textareaResult.value += "Prime Numbers: " + primesSquareRoot.join(", ") + "\n\n";
-            textareaResult.value += "Using n/2: " + (endHalf - startHalf) + " milliseconds\n";
-            textareaResult.value += "Prime Numbers: " + primesHalf.join(", ");
+            tArea.value = "Using Square Root: " + (endSquareRoot - startSquareRoot) + " milliseconds\n";
+            tArea.value += "Prime Numbers: " + primesSquareRoot.join(", ") + "\n\n";
+            tArea.value += "Using n/2: " + (endHalf - startHalf) + " milliseconds\n";
+            tArea.value += "Prime Numbers: " + primesHalf.join(", ");
         }
     </script>
 </head>
