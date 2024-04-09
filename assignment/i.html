@@ -14,8 +14,8 @@
             var sevenDigitNumber = tokens[2] + tokens[3] ;
 
             // Display the extracted parts in separate text fields
-            document.getElementById("areaCode").value = areaCode;
-            document.getElementById("phoneNumberDigits").value = sevenDigitNumber;
+            document.getElementById("areaCode").innerText = areaCode;
+            document.getElementById("phoneNumberDigits").innerText = sevenDigitNumber;
         }
     </script>
 </head>
@@ -27,9 +27,9 @@
     <button onclick="parsePhoneNumber()">Parse</button>
     <br><br>
     <label for="areaCode">Area Code:</label>
-    <input type="text" id="areaCode" name="areaCode" readonly>
+    <p id="areaCode" ></p>
     <br><br>
     <label for="phoneNumberDigits">Phone Number:</label>
-    <input type="text" id="phoneNumberDigits" name="phoneNumberDigits" readonly>
+    <p  id="phoneNumberDigits" ></p>
 </body>
 </html>
