@@ -28,7 +28,7 @@
         function imageClick() {
             alert("You clicked the image.");
             event.preventDefault(); // Prevent default behavior
-            event.stopPropagation(); // Stop event propagation
+            event.cancelBubble(); // Stop event propagation
             event.returnValue = true; // Set event object to true
         }
 
