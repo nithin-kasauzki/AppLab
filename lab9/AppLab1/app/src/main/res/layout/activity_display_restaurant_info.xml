@@ -25,6 +25,20 @@
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
 
+    <TextView
+        android:id="@+id/tvCuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvAprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
     <!-- Add more TextViews for other fields if necessary -->
 
 </LinearLayout>
