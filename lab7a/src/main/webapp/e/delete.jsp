@@ -14,7 +14,7 @@
         PreparedStatement pstmt = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AppLab", "root", "Pa$$word2");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AppLab", "user", "pass");
             //conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/yourdatabase", "username", "password");
             String query = "DELETE FROM Employee WHERE Eid=?";
             pstmt = conn.prepareStatement(query);

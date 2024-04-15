@@ -1,5 +1,4 @@
 package com.example.applab5;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     private SpeechRecognizer speechRecognizer;
@@ -36,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
         speechRecognizer.setRecognitionListener(new RecognitionListener() {
             @Override
             public void onReadyForSpeech(Bundle bundle) {}
-
             @Override
             public void onBeginningOfSpeech() {}
-
             @Override
             public void onRmsChanged(float rmsdB) {}
 

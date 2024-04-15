@@ -10,8 +10,8 @@
     <%
     
     String url = "jdbc:mysql://localhost:3306/AppLab";
-    String username = "root";
-    String password = "Pa$$word2";
+    String username = "user";
+    String password = "pass";
     
         String eid = request.getParameter("eid");
         String ename = request.getParameter("ename");

@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 public class SurveyServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/AppLab";
-    private static final String JDBC_USER = "root"; // Your MySQL username
-    private static final String JDBC_PASSWORD = "Pa$$word2"; // Your MySQL password
+    private static final String JDBC_USER = "user"; // Your MySQL username
+    private static final String JDBC_PASSWORD = "pass"; // Your MySQL password
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

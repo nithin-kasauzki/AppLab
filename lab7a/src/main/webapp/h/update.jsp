@@ -8,8 +8,8 @@
 <body>
     <h1>Update Book</h1>
     <%
-    String username = "root";
-    String password = "Pa$$word2";
+    String username = "user";
+    String password = "pass";
         String action = request.getParameter("action");
         if (action != null && action.equals("update")) {
             String bid = request.getParameter("bid");

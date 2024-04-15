@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Image Map Example</title>
     <style>
         #info-container {
@@ -18,28 +18,20 @@
 </head>
 <body>
 
-<h2> Map</h2>
+    <h2> Map</h2>
 
-<img src="world-map.jpg" alt="World Map" usemap="#worldMap" id="mapImage"  width="800" height="600" />
+    <img src="world-map.jpg" alt="World Map" usemap="#worldMap" id="mapImage"  width="800" height="600" />
 
-<!-- Information container for hot spots -->
-<div id="info-container">
-    <h3 id="info-title">Country Information</h3>
-    <p id="info-content">Click on a country to see related information.</p>
-</div>
+    <!-- Information container for hot spots -->
+    <div id="info-container">
+        <h3 id="info-title">Country Information</h3>
+        <p id="info-content">Click on a country to see related information.</p>
+    </div>
 
-<map name="worldMap">
-    
-    <area shape="rect" coords="50,100,350,400" alt="USA" title="USA" href="usa.html">
-
-
-    <area shape="rect" coords="200,250,600,500" alt="Africa" title=" Africa" href="africa.html">
-
-   
-    <area shape="rect" coords="400,150,650,300" alt="India" title=" India" href="india.html">
-</map>
-
-
-
+    <map name="worldMap">
+        <area shape="rect" coords="50,100,350,400" alt="USA" title="USA" href="usa.html">
+        <area shape="rect" coords="200,250,600,500" alt="Africa" title=" Africa" href="africa.html">
+        <area shape="rect" coords="400,150,650,300" alt="India" title=" India" href="india.html">
+    </map>
 </body>
 </html>

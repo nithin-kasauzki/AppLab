@@ -19,8 +19,8 @@
             <th>Action</th>
         </tr>
         <% 
-        String username = "root";
-        String password = "Pa$$word2";
+        String username = "user";
+        String password = "pass";
             Connection conn = null;
             Statement stmt = null;
             ResultSet rs = null;

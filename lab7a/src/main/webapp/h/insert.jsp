@@ -5,8 +5,8 @@
     String author = request.getParameter("author");
     String isbn = request.getParameter("isbn");
     double price = Double.parseDouble(request.getParameter("price"));
-    String username = "root";
-    String password = "Pa$$word2";
+    String username = "user";
+    String password = "pass";
     
 
     Connection conn = null;
