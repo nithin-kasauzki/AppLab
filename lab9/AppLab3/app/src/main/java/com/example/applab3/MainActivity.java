@@ -55,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder otp = new StringBuilder();
         Random random = new Random();
         for (int i = 0; i < length; i++) {
-            otp.append(random.nextInt(10)); // Append a random digit (0-9)
-        }
+            otp.append(random.nextInt(10)); 
         return otp.toString();
     }
 }

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextAddress;
     private EditText editTextPhone;
     private EditText editCuisine;
-    private EditText editAvgPrice;
+
 
 
     @Override
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
          editTextPhone = findViewById(R.id.editTextPhone);
         editTextRestaurantName = findViewById(R.id.editTextRestaurantName);
         editCuisine = findViewById(R.id.editTextCuisine);
-        editAvgPrice = findViewById(R.id.editTextAveragePrice);
+
 
         Button submitBtn = findViewById(R.id.submitBtn);
         submitBtn.setOnClickListener(new View.OnClickListener() {
@@ -40,13 +40,11 @@ public class MainActivity extends AppCompatActivity {
         String address = editTextAddress.getText().toString();
         String phone = editTextPhone.getText().toString();
         String cusine = editCuisine.getText().toString();
-        String aprice = editAvgPrice.getText().toString();
         Intent intent = new Intent(this, DisplayRestaurantInfoActivity.class);
         intent.putExtra("RESTAURANT_NAME", restaurantName);
         intent.putExtra("ADDRESS", address);
         intent.putExtra("PHONE", phone);
         intent.putExtra("Cuisine", cusine);
-        intent.putExtra("Avg Price", aprice);
 
         startActivity(intent);
     }

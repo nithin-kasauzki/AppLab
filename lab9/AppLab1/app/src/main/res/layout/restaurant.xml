@@ -1,6 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="30dp">
+
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
@@ -8,9 +10,11 @@
         android:padding="16dp">
 
         <TableRow>
+
             <TextView
-                android:text="Restaurant Name"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:text="Restaurant Name" />
+
             <EditText
                 android:id="@+id/editTextRestaurantName"
                 android:hint="Enter name"
@@ -18,9 +22,11 @@
         </TableRow>
 
         <TableRow>
+
             <TextView
-                android:text="Address"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:text="Address" />
+
             <EditText
                 android:id="@+id/editTextAddress"
                 android:hint="Enter address"
@@ -28,46 +34,43 @@
         </TableRow>
 
         <TableRow>
+
             <TextView
-                android:text="Phone Number"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:text="Phone Number" />
+
             <EditText
                 android:id="@+id/editTextPhone"
                 android:hint="Enter phone"
                 android:inputType="phone" />
+
         </TableRow>
 
 
-
         <TableRow>
+
             <TextView
-                android:text="Cuisine Type"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:text="Cuisine Type" />
+
             <EditText
                 android:id="@+id/editTextCuisine"
                 android:hint="e.g., Italian, Chinese"
                 android:inputType="text" />
         </TableRow>
 
-        <TableRow>
-            <TextView
-                android:text="Average Meal Price ($)"
-                android:padding="8dp" />
-            <EditText
-                android:id="@+id/editTextAveragePrice"
-                android:hint="Enter price"
-                android:inputType="numberDecimal" />
-        </TableRow>
 
+        <TableRow
+            android:layout_width="332dp"
+            android:layout_height="218dp">
 
-
-
-
-        <TableRow>
             <Button
                 android:id="@+id/submitBtn"
-                android:text="Submit"
-                android:layout_span="2" />
+                android:layout_width="292dp"
+                android:layout_height="match_parent"
+                android:layout_span="2"
+                android:insetLeft="20dp"
+                android:text="Submit" />
         </TableRow>
     </TableLayout>
 </ScrollView>

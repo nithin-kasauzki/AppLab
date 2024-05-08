@@ -8,10 +8,30 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="139dp" />
+
+    <Button
+        android:id="@+id/btnPickFile"
+        android:layout_width="300dp"
+        android:layout_height="98dp"
+        android:insetLeft="30dp"
+        android:insetTop="26dp"
+        android:insetRight="10dp"
+        android:insetBottom="26dp"
+        android:text="Pick Audio/Video File"
+        app:backgroundTint="#6620E3" />
+
     <Button
         android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="301dp"
+        android:layout_height="101dp"
+        android:insetLeft="20dp"
+        android:insetTop="26dp"
+        android:insetRight="10dp"
+        android:insetBottom="26dp"
         android:text="Start Listening" />
 
     <TextView

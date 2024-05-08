@@ -11,12 +11,16 @@ public class UserDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_details);
 
-        TextView tvDetails = findViewById(R.id.tvDetails);
+        TextView tvName = findViewById(R.id.tvName);
+        TextView tvEmail = findViewById(R.id.tvEmail);
+        TextView tvPhone = findViewById(R.id.tvPhone);
 
-        String userDetails = "Name: " + getIntent().getStringExtra("Name") + "\n" +
-                "Email: " + getIntent().getStringExtra("Email") + "\n" +
-                "Phone: " + getIntent().getStringExtra("Phone");
+        String name = getIntent().getStringExtra("Name");
+        String email = getIntent().getStringExtra("Email");
+        String phone = getIntent().getStringExtra("Phone");
 
-        tvDetails.setText(userDetails);
+        tvName.setText(name);
+        tvEmail.setText(email);
+        tvPhone.setText(phone);
     }
 }

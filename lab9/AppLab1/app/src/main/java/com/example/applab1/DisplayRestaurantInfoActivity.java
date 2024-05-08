@@ -16,19 +16,19 @@ public class DisplayRestaurantInfoActivity extends AppCompatActivity {
         TextView tvAddress = findViewById(R.id.tvAddress);
         TextView tvPhone = findViewById(R.id.tvPhone);
         TextView tvCuisine = findViewById(R.id.tvCuisine);
-        TextView tvAprice= findViewById(R.id.tvAprice);
+
         Intent intent = getIntent();
         if(intent != null) {
             String restaurantName = intent.getStringExtra("RESTAURANT_NAME");
             String address = intent.getStringExtra("ADDRESS");
             String phone = intent.getStringExtra("PHONE");
             String cusine = intent.getStringExtra("Cuisine");
-            String aprice = intent.getStringExtra("Avg Price");
-            tvRestaurantName.setText("RESTAURANT NAME: "+restaurantName);
-            tvAddress.setText("ADDRESS: "+address);
-            tvPhone.setText("PHONE: "+ phone);
-            tvCuisine.setText("CUISINE: "+ cusine);
-            tvAprice.setText("AVG PRICE: "+ aprice);
+
+            tvRestaurantName.setText(restaurantName);
+            tvAddress.setText(address);
+            tvPhone.setText(phone);
+            tvCuisine.setText(cusine);
+
         }
     }
 

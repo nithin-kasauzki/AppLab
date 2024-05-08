@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -6,46 +7,84 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="16dp">
 
+        <!-- Heading TextView for the Form -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banking Sign Up"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="#333333"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- EditText for Full Name -->
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"/>
+            android:hint="Full Name"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"/>
 
+        <!-- EditText for Email -->
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"/>
 
+        <!-- EditText for Phone Number -->
         <EditText
             android:id="@+id/etPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone Number"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"/>
 
+        <!-- Button to Send OTP -->
         <Button
             android:id="@+id/btnSendOTP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register and Send OTP"/>
+            android:text="Register and Send OTP"
+            android:background="@color/purple_500"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
+        <!-- EditText for OTP -->
         <EditText
             android:id="@+id/etOTP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter OTP"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"/>
 
+        <!-- Button to Verify OTP -->
         <Button
             android:id="@+id/btnVerifyOTP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Verify OTP"/>
+            android:text="Verify OTP"
+            android:background="@color/purple_500"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 </ScrollView>
