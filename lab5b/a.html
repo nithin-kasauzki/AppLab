@@ -6,7 +6,7 @@
         #upperFrame {
             height: 50%;
             border: 1px solid black;
-            overflow: hidden; /* Added overflow to prevent scrollbars */
+            overflow: hidden; 
         }
         
         #lowerFrame {
@@ -18,7 +18,6 @@
             width: 180px;
             height: 160px;
             object-fit: contain;
-            cursor: pointer; /* Add cursor pointer to indicate clickable */
         }
     </style>
     <script>
@@ -35,9 +34,9 @@
 </head>
 <body>
     <div id="upperFrame">
-        <img src="img1.png" onclick="displayImage('img1.png')" />
-        <img src="img2.png" onclick="displayImage('img2.png')" />
-        <img src="img3.png" onclick="displayImage('img3.png')" />
+        <img src="img1.jpg" onclick="displayImage('img1.jpg')" />
+        <img src="img2.jpg" onclick="displayImage('img2.jpg')" />
+        <img src="img3.jpg" onclick="displayImage('img3.jpg')" />
     </div>
     <div id="lowerFrame" onclick="clearImage()">
     </div>

@@ -3,10 +3,36 @@
 <head>
     <title>String Manipulation</title>
     <style>
-        p {
-            border: 1px solid black;
-            width: 50%;
+        body {
+            padding: 20px;
         }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 300px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+
+        }
+        button {
+            background-color: #5c67f2;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            width: 90px;
+        }
+
+        p {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+
     </style>
     <script>
         function searchSubstring() {
@@ -41,7 +67,7 @@
 <body>
     <h1>String Manipulation</h1>
     <label for="inputString">Enter a string:</label>
-    <input type="text" id="inputString"><br><br>
+    <input type="text" id="inputString"><br>
 
     <label for="inputSubstring">Enter a substring to search:</label>
     <input type="text" id="inputSubstring">
@@ -49,18 +75,22 @@
     <p id="searchResult"></p><br>
 
     <hr>
+
     <label for="inputIndex">Enter an index:</label>
     <input type="number" id="inputIndex">
     <button onclick="getCharacter()">Get Character</button>
     <p id="characterResult"></p><br>
-<hr>
+
+    <hr>
+
     <label for="inputString1">Enter first string:</label>
-    <input type="text" id="inputString1"><br><br>
+    <input type="text" id="inputString1"><br>
 
     <label for="inputString2">Enter second string:</label>
     <input type="text" id="inputString2">
     <button onclick="concatenateStrings()">Concatenate</button>
     <p id="concatenationResult"></p>
+
     <hr>
 </body>
 </html>

@@ -9,17 +9,16 @@
 <body>
     <h1>Sorted Names</h1>
     
-    <%-- Define the list of names --%>
+
     <%
         // Define an array of names
-        String[] names = {"John", "Alice", "Bob", "David", "Emily"};
+        String[] names = {"Nithin", "Kumar", "Sanjiv", "Dhoni", "Virat"};
         
         // Sort the array of names
         java.util.Arrays.sort(names);
     %>
     
     <ul>
-        <%-- Display the sorted list of names --%>
         <% for (String name : names) { %>
             <li><%= name %></li>
         <% } %>

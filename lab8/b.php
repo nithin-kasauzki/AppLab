@@ -74,6 +74,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
+    <style>
+        form {
+            border: 1px solid #ccc;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+        }
+    </style>
 </head>
 <body>
     <h2>Add Patient</h2>

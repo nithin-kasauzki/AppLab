@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -28,10 +27,10 @@
     // Update text position and content
     textElement.style.left = mouseX + 'px';
     textElement.style.top = mouseY + 'px';
-    textElement.innerHTML = `Mouse Coordinates: (${mouseX}, ${mouseY})`;
+    textElement.innerHTML = `: (${mouseX}, ${mouseY})`;
 
     // Update image position
-    imageElement.style.left = (mouseX - 50) + 'px'; // Adjust for image width
+    imageElement.style.left = (mouseX - 100) + 'px'; // Adjust for image width
     imageElement.style.top = (mouseY - 50) + 'px'; // Adjust for image height
   }
 
@@ -41,7 +40,7 @@
 <p id="movingText"></p>
 
 
-<img id="movableImage" src="img.jpg" alt="Movable Image" width="100" height="100">
+<img id="movableImage" src="im.jpg" alt="Movable Image" width="100" height="100">
 
 </body>
 </html>

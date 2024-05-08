@@ -13,18 +13,16 @@ try {
     die();
 }
 
+// Function to fetch and display table data
 function displayTable($conn, $tableName) {
-    echo "<h3>$tableName</h3>";
     $stmt = $conn->prepare("SELECT * FROM $tableName");
     $stmt->execute();
+
+    // Set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $rows = $stmt->fetchAll();
 
-    if(empty($rows)) {
-        echo "No data available.<br>";
-        return;
-    }
-
+    echo "<h3>$tableName</h3>";
     echo "<table border='1'><tr>";
     // Header
     foreach ($rows[0] as $key => $value) {
@@ -49,17 +47,18 @@ function displayTable($conn, $tableName) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        
         table { border-collapse: collapse; margin-right: 20px; }
         th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
     </style>
-    <title>Display Database Tables</title>
+    <title>Display Tables</title>
 </head>
 <body>
     <div>
         <?php
-        displayTable($conn, "STUDENT2");
-        displayTable($conn, "COURSES2");
-        displayTable($conn, "COURSE_TAKEN2");
+        displayTable($conn, "PATIENT");
+        displayTable($conn, "DIAGNOSIS");
+        displayTable($conn, "TREATMENT");
         ?>
     </div>
 </body>

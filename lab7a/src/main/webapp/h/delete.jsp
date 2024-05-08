@@ -5,8 +5,8 @@
     
     // Database Connection Parameters
     String url = "jdbc:mysql://localhost:3306/AppLab";
-    String username = "root";
-    String password = "Pa$$word2";
+    String username = "user";
+    String password = "pass";
     
     Connection conn = null;
     PreparedStatement pstmt = null;

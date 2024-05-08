@@ -14,35 +14,35 @@ try {
 }
 
 function addStudent($conn) {
-    $sql = "INSERT INTO STUDENT VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO STUDENT2 VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$_POST['rollno'], $_POST['name'], $_POST['branch'], $_POST['year'], $_POST['cgpa'], $_POST['dob'], $_POST['emailID']]);
     echo "New student added.<br>";
 }
 
 function addCourse($conn) {
-    $sql = "INSERT INTO COURSES (Cid, Cname, FacultyName) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO COURSES2 (Cid, Cname, FacultyName) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$_POST['cid'], $_POST['cname'], $_POST['facultyName']]);
     echo "New course added.<br>";
 }
 
 function assignCourse($conn) {
-    $sql = "INSERT INTO COURSE_TAKEN (Rollno, Cid) VALUES (?, ?)";
+    $sql = "INSERT INTO COURSE_TAKEN2 (Rollno, Cid) VALUES (?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$_POST['rollno'], $_POST['cid']]);
     echo "Course assigned to student.<br>";
 }
 
 function updateStudent($conn) {
-    $sql = "UPDATE STUDENT SET Name = ? WHERE Rollno = ?";
+    $sql = "UPDATE STUDENT2 SET Name = ? WHERE Rollno = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$_POST['name'], $_POST['rollno']]);
     echo "Student record updated.<br>";
 }
 
 function deleteStudent($conn) {
-    $sql = "DELETE FROM STUDENT WHERE Rollno = ?";
+    $sql = "DELETE FROM STUDENT2 WHERE Rollno = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$_POST['rollno']]);
     echo "Student record deleted.<br>";
@@ -75,6 +75,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>University Database Management</title>
+    <style>
+        form {
+            border: 1px solid #ccc;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+        }
+    </style>
 </head>
 <body>
 

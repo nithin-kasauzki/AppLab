@@ -3,26 +3,38 @@
 <head>
     <title>String Manipulation</title>
     <style>
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+        body {
+            color: #333;
+            padding: 20px;
         }
 
-        input {
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #5a5a5a;
+        }
+
+        input, button {
             width: 200px;
-            padding: 8px;
-            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid;
         }
 
         button {
-            padding: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: auto;
         }
 
+
         #output {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: white;
         }
     </style>
     <script>
@@ -35,7 +47,6 @@
                     lastIndex = i;
                 }
             }
-            
             displayOutput("Last occurrence index: " + lastIndex);
         }
 
@@ -44,7 +55,6 @@
             var start = parseInt(document.getElementById("startPosition").value);
             var end = parseInt(document.getElementById("endPosition").value);
             var substring = "";
-            
             for (var i = start; i < end && i < str.length; i++) {
                 substring += str[i];
             }
@@ -54,11 +64,7 @@
         function splitString() {
             var str = document.getElementById("inputString").value;
             var delimiter = document.getElementById("splitDelimiter").value;
-
-           
             var substrings = str.split(delimiter);
-
-           
             displayOutput("Split substrings: " + substrings.join(", "));
         }
 
@@ -71,8 +77,6 @@
             clearOutput();
         }
 
-        
-
         function displayOutput(output) {
             document.getElementById("output").innerHTML = output;
         }
@@ -82,7 +86,7 @@
         }
     </script>
 </head>
-<body style="margin: 20px;">
+<body>
     <label for="inputString">Enter a string:</label>
     <input type="text" id="inputString" placeholder="Enter a string">
     <br>
@@ -100,7 +104,6 @@
     <button onclick="splitString()">Split String</button>
     <br>
     <button onclick="resetForm()">Reset</button>
-
     <div id="output"></div>
 </body>
 </html>

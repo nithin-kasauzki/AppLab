@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bib SYSTEM "a.dtd">
 <bib>
-    <!-- please change the data  -->
-    
-    <book year="2022">
-        <title>Book Title</title>
+    <book year="2012">
+        <title>Data structures and Algorithms</title>
         <author>
-            <last>Last Name</last>
-            <first>First Name</first>
+            <last>Kumar</last>
+            <first>Nithin</first>
         </author>
-        <publisher>Publisher Name</publisher>
-        <price>19.99</price>
+        <publisher>Good Publisher</publisher>
+        <price>99.99</price>
     </book>
-    <book year="2023">
-        <title>Another Book Title</title>
+    <book year="2013">
+        <title>Windows</title>
         <editor>
-            <last>Last Name</last>
-            <first>First Name</first>
-            <affiliation>Affiliation</affiliation>
+            <last>Gates</last>
+            <first>Bill</first>
+            <affiliation>CEO</affiliation>
         </editor>
-        <publisher>Another Publisher Name</publisher>
+        <publisher>Microsoft Publications</publisher>
         <price>24.99</price>
     </book>
 </bib>

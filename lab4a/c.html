@@ -1,8 +1,15 @@
- 
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Integer Power Calculation</title>
+    <style>
+        input {
+            height: 30px;
+            width: 60px;
+            text-align: center;
+        }
+    </style>
     <script>
         function Integer_Power(base, exponent) {
             let result = 1;
@@ -24,11 +31,12 @@
     <h1>Integer Power Calculation</h1>
     <form>
         <label for="base">Base:</label>
-        <input type="text" id="base" name="base"><br><br>
+        <input type="text" id="base" name="base">
         <label for="exponent">Exponent:</label>
         <input type="text" id="exponent" name="exponent"><br><br>
         <button type="button" onclick="calculatePower()">Calculate</button>
     </form>
+    <br>
     <div id="result"></div>
 </body>
 </html>
